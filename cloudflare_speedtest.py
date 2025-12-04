@@ -1583,7 +1583,7 @@ def generate_proxy_list(result_file="result.csv", output_file="ips_ports.txt"):
             
             # 如果没有找到端口，使用默认值
             if not port:
-                port = '443'
+                port = '8443'
             
             if ip and port:
                 proxy_ips.append(f"{ip}:{port}")
@@ -1595,7 +1595,7 @@ def generate_proxy_list(result_file="result.csv", output_file="ips_ports.txt"):
         
         print(f"反代IP列表已生成: {output_file}")
         print(f"共生成 {len(proxy_ips)} 个反代IP")
-        print(f"📝 格式: IP:端口 (如: 1.2.3.4:443)")
+        print(f"📝 格式: IP:端口 (如: 1.2.3.4:8443)")
         
         # 显示前10个IP作为示例
         if proxy_ips:
@@ -2952,7 +2952,7 @@ def upload_to_cloudflare_api(result_file="result.csv"):
                 
                 # 设置默认端口
                 if not port:
-                    port = '443'
+                    port = '8443'
                 
                 if ip:
                     try:
@@ -3321,7 +3321,7 @@ def upload_to_github(result_file="result.csv"):
                 
                 # 设置默认端口
                 if not port:
-                    port = '443'
+                    port = '8443'
                 
                 if ip:
                     try:
@@ -3694,7 +3694,7 @@ def upload_to_cloudflare_api_cli(result_file="result.csv", worker_domain=None, u
                 
                 # 设置默认端口
                 if not port:
-                    port = '443'
+                    port = '8443'
                 
                 if ip:
                     try:
@@ -3898,7 +3898,7 @@ def upload_to_github_cli(result_file="result.csv", repo_info=None, github_token=
                 
                 # 设置默认端口
                 if not port:
-                    port = '443'
+                    port = '8443'
                 
                 if ip:
                     try:
